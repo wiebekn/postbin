@@ -1,0 +1,28 @@
+---
+# Variables listed here are applicable to the whole project
+# Also for the vagrant installation
+
+# vagrant
+hostname: postbin.kloos.dev
+basedir: /var/www/vhosts
+project: postbin
+ipaddress: 192.168.33.21
+
+# Base
+ntpserver: time.google.com
+
+# Database
+mysqlservice: mysqld
+mysql_port: 3306
+dbuser: "{{project}}_user"
+dbhost: localhost
+dbname: "{{project}}"
+upassword: KLMW1bTabbam3b4
+
+# Apache / Httpd
+httpd_port: 80
+ssl_port: 443
+documentroot: "{{basedir}}/{{project}}/live/public"
+server_admin: wiebe@kloosterman.cc
+
+httpd_config : /etc/httpd/conf/httpd.conf
