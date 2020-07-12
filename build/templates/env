@@ -1,4 +1,4 @@
-APP_NAME=Baby-guess
+APP_NAME=postbin
 APP_ENV=%%project_environment%%
 APP_KEY=%%project_key%%
 APP_DEBUG=%%project_debug%%
