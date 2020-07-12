@@ -1,5 +1,6 @@
 <?php
 
+use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -16,3 +17,11 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', function () {
     return view('welcome');
 });
+
+Auth::routes();
+
+Route::resource('bins', 'BinController')->only(['index', 'store', 'show']);
+Route::get('/vue/bins', 'BinController@vueIndex');
+Route::get('/vue/bins/{bin}', 'BinController@vueShow');
+
+Route::any('/bin/{uuid}', 'PostController@index');
