@@ -14,7 +14,7 @@
 
 <target name="main">
     <echo message="+------------------------------------------+"/>
-    <echo message="| Deploying changeme                       |"/>
+    <echo message="| Deploying postbin                        |"/>
     <echo message="+------------------------------------------+"/>
 
     <exec command="basename `pwd`"
