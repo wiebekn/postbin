@@ -123,7 +123,7 @@ return [
          */
         'passphrase' => "",
 
-        'verify_peer' => false,
+        //'verify_peer' => false,
     ],
 
     /*
