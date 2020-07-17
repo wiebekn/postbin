@@ -45,12 +45,16 @@ import Echo from 'laravel-echo';
 
 window.pusher = require('pusher-js');
 
+// wsPath: '/ws',
+// wsHost: window.location.hostname,
+// wssPort: 6001,
+
 window.Echo = new Echo({
     broadcaster: 'pusher',
     key: process.env.MIX_PUSHER_APP_KEY,
     wsHost: window.location.hostname,
-    wsPort: 6001,
-    wssPort: 6001,
+    wsPort: 80,
+    wssPort: 443,
     disableStats: true,
     encrypted: true
 });
