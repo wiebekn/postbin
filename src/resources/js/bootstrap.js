@@ -52,7 +52,7 @@ window.pusher = require('pusher-js');
 window.Echo = new Echo({
     broadcaster: 'pusher',
     key: process.env.MIX_PUSHER_APP_KEY,
-    wsHost: 'ws-' + window.location.hostname,
+    wsHost: window.location.hostname,
     wsPort: 80,
     wssPort: 443,
     disableStats: true,
