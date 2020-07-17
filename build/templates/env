@@ -15,7 +15,7 @@ DB_USERNAME=%%db_username%%
 DB_PASSWORD=%%db_password%%
 
 CACHE_DRIVER=array
-BROADCAST_DRIVER=log
+BROADCAST_DRIVER=pusher
 QUEUE_CONNECTION=sync
 SESSION_DRIVER=file
 SESSION_LIFETIME=120
@@ -44,7 +44,7 @@ PUSHER_APP_CLUSTER=mt1
 MIX_PUSHER_APP_KEY="${PUSHER_APP_KEY}"
 MIX_PUSHER_APP_CLUSTER="${PUSHER_APP_CLUSTER}"
 
-LARAVEL_WEBSOCKETS_SSL_LOCAL_CERT=%%laravel_websockets_ssl_local_cert%%
-LARAVEL_WEBSOCKETS_SSL_LOCAL_PK=%%laravel_websockets_ssl_local_pk%%
+#LARAVEL_WEBSOCKETS_SSL_LOCAL_CERT=%%laravel_websockets_ssl_local_cert%%
+#LARAVEL_WEBSOCKETS_SSL_LOCAL_PK=%%laravel_websockets_ssl_local_pk%%
 LARAVEL_WEBSOCKETS_PORT=%%laravel_websockets_port%%
 LARAVEL_WEBSOCKETS_HOST=%%laravel_websockets_host%%
