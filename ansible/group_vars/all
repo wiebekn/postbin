@@ -3,7 +3,7 @@
 # Also for the vagrant installation
 
 # vagrant
-hostname: postbin.kloos.dev
+hostname: postbin.wiebekn.dev
 basedir: /var/www/vhosts
 project: postbin
 ipaddress: 192.168.33.21

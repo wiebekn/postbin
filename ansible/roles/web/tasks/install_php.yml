@@ -1,5 +1,5 @@
 ---
-# These tasks install php 7.3
+# These tasks install php 7.4
 
 - name: epel-release
   yum: name=epel-release state=installed
@@ -14,8 +14,8 @@
     key: "{{ remi_repo_gpg_key_url }}"
     state: present
 
-- name: install php73
-  yum: name={{ packages }} enablerepo=epel,remi,remi-php73 state=installed
+- name: install php74
+  yum: name={{ packages }} enablerepo=epel,remi,remi-php74 state=installed
   vars:
     packages:
     - php
@@ -34,7 +34,7 @@
     - php-bcmath
     - php-json
     - php-mysql
-    - php-pecl-xdebug
+    - php-pecl-xdebug.x86_64
 
 - name: Create xdebug.ini
   template: src=15-xdebug.ini.j2 dest=/etc/php.d/15-xdebug.ini
