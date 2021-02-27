@@ -1,6 +1,6 @@
 <template>
     <div>
-        <div v-for="item in data.binItems.reverse()" class="card my-2">
+        <div v-for="item in data.binItems.slice().reverse()" class="card my-2">
             <div class="card-header d-flex">
                 {{item.method}} {{ item.url }}
                 <div class="ml-auto">{{ item.date | formatDate }}</div>
