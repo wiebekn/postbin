@@ -1,0 +1,7 @@
+[DEFAULT]
+verbose = true
+
+[production]
+servers=vps01
+#example deploy.sh project v1.0.0 production
+cmd=deploy.sh {project} {release} production
