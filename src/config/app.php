@@ -165,6 +165,7 @@ return [
         /*
          * Package Service Providers...
          */
+	Dawilog\Laravel\ServiceProvider::class,
 
         /*
          * Application Service Providers...
