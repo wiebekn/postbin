@@ -36,6 +36,10 @@ class Handler extends ExceptionHandler
      */
     public function report(Throwable $exception)
     {
+        if (app()->bound('dawilog') && $this->shouldReport($exception)) {
+            app('dawilog')->sendException($exception);
+        }
+
         parent::report($exception);
     }
 
