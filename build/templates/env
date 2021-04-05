@@ -48,3 +48,5 @@ MIX_PUSHER_APP_CLUSTER="${PUSHER_APP_CLUSTER}"
 #LARAVEL_WEBSOCKETS_SSL_LOCAL_PK=%%laravel_websockets_ssl_local_pk%%
 LARAVEL_WEBSOCKETS_PORT=%%laravel_websockets_port%%
 LARAVEL_WEBSOCKETS_HOST=%%laravel_websockets_host%%
+
+DAWILOG_DSN=%%dawilog_dsn%%

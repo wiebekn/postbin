@@ -21,6 +21,7 @@
                     <token key="laravel_websockets_ssl_local_pk" value="${laravel.websockets.ssl.local.pk}" />
                     <token key="laravel_websockets_port" value="${laravel.websockets.port}" />
                     <token key="laravel_websockets_host" value="${laravel.websockets.host}" />
+                    <token key="dawilog_dsn" value="${dawilog.dsn}" />
                 </replacetokens>
             </filterchain>
         </copy>
