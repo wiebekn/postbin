@@ -24,4 +24,4 @@ Route::resource('bins', 'BinController')->only(['index', 'store', 'show']);
 //Route::get('/vue/bins', 'BinController@vueIndex');
 //Route::get('/vue/bins/{bin}', 'BinController@vueShow');
 
-Route::any('/bin/{uuid}', 'PostController@index');
+//

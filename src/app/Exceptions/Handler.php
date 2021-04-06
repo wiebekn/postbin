@@ -54,6 +54,13 @@ class Handler extends ExceptionHandler
      */
     public function render($request, Throwable $exception)
     {
+        if ($exception instanceof PostBinException) {
+            return response()->json(
+                $exception->getErrorMessage(),
+                $exception->getStatus()
+            );
+        }
+
         return parent::render($request, $exception);
     }
 }

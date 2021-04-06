@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Bin;
 use App\BinItem;
 use App\Events\BinItemAdd;
+use App\Exceptions\PostBinException;
 use App\Http\Resources\BinItemResource;
 use App\User;
 use Illuminate\Http\Request;
@@ -16,7 +17,7 @@ class PostController extends Controller
     {
         $objBin = Bin::where('uuid', $uuid)->first();
         if (!is_object($objBin)) {
-            abort(404);
+            throw new PostBinException('', PostBinException::NOT_FOUND);
         }
         $objBinItem = new BinItem();
         $objBinItem->header = serialize($request->header());
