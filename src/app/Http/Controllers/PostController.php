@@ -24,7 +24,9 @@ class PostController extends Controller
         $objBinItem->ip_address = $request->server->get('REMOTE_ADDR') ?? 'Unknown';
         $objBinItem->content = serialize($request->getContent());
         $objBinItem->method = $request->getMethod();
-        $objBinItem->url = $request->getUri();
+
+        $strUrl = preg_replace('/^http:\/\//', 'https://', $request->getUri());
+        $objBinItem->url = $strUrl;
 
         $objBinItem = $objBin->binItems()->save($objBinItem);
 
